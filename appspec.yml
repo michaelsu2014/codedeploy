@@ -9,7 +9,9 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/
+    - location: scripts/move_files.share
+      timeout: 300
+      runas: root
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
