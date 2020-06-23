@@ -5,18 +5,18 @@ files:
     destination: /usr/share/httpd/noindex
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
+    - location: scripts/install_dependencies.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/move_files
+    - location: scripts/move_file.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: scripts/stop_server.sh
       timeout: 300
       runas: root  
   ApplicationStart:
-    - location: scripts/start_servers
+    - location: scripts/start_servers.sh
       timeout: 300
       runas: root
