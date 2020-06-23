@@ -9,7 +9,7 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: scripts/move_file.sh
+    - location: scripts/move_files.sh
       timeout: 300
       runas: root
   ApplicationStop:
